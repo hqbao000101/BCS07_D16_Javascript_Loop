@@ -68,7 +68,10 @@ function ex3() {
 
   // todo: check valid
   if (n_number < 0) {
-    alert("Giá trị số n vừa nhập ở bài tập 3 không hợp lệ!");
+    alert("Giá trị số n vừa nhập ở bài 3 không hợp lệ!");
+    // todo: clear previous result
+    document.querySelector(".ex3 .result .text-success").innerHTML = "";
+    return;
   } else if (n_number > 0) {
     // todo: loop
     for (var i = 1; i <= n_number; i++) {
@@ -83,15 +86,34 @@ function ex3() {
 // ! EX4: Hãy viết chương trình khi click vào button sẽ in ra 10 thẻ div. Nếu div vào vị trí chẵn thì bg màu đỏ, lẻ thì bg màu xanh dương
 /* 
 todo: Mô Hình 3 Khối
-* input:
+* input: không có
 * bước xử lý: 
-*   1. 
-*   2. 
-*   3. 
-*   4. 
-*   5. 
-* output: 
+*   1. tạo sự kiện onclick trên thẻ button
+*   2. khỏi tạo biến result chứa kết quả
+*   3. chạy vòng lặp với biến i tăng dần từ 1 đến 10
+*   4. trong vòng lặp thực hiện if-else. Nếu:
+*       - i % 2 == 0: result += `<div class="bg-danger">div thứ ${i}:</div>`
+*       - i % 2 == 1: result += `<div class="bg-info">div thứ ${i}:</div>`
+*   5. getElementById đến thẻ rồi innerHTML để in kết quả ra màn hình
+* output: 10 thẻ div màu đỏ và xanh dương xen kẽ
 */
+
+function ex4() {
+  // todo: initiate result
+  var result = "";
+
+  // todo: loop
+  for (var i = 1; i <= 10; i++) {
+    if (i % 2 == 0) {
+      result += `<div class="bg-danger text-center text-white fst-italic py-3 my-3">div-nth-${i}</div>`;
+    } else {
+      result += `<div class="bg-info text-center text-white fst-italic py-3 my-3">div-nth-${i}</div>`;
+    }
+  }
+
+  // todo: print result
+  document.getElementById("drawDiv").innerHTML = result;
+}
 
 // ! EX5: Viết chương trình có một ô input, một button. Khi click vào button thì in ra các số nguyên tố từ 1 tới giá trị của ô input
 /* 
@@ -105,3 +127,34 @@ todo: Mô Hình 3 Khối
 *   5. 
 * output: 
 */
+
+function ex5() {
+  // todo: take n
+  var n_number = +document.getElementById("ex5-n").value;
+  var result = "";
+
+  // todo: check valid
+  if (n_number < 2) {
+    alert("Giá trị số n vừa nhập ở bài 5 không hợp lệ!");
+  } else {
+    // todo: loop
+    for (var i = 2; i <= n_number; i++) {
+      var count = 0;
+      for (var j = 1; j <= Math.floor(i / 2); j++) {
+        if (i % j == 0) {
+          count++;
+        }
+      }
+      if (count == 1) {
+        result += `
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <p class="text-white bg-warning rounded-5 py-3 text-center shadow">${i}</p>
+        </div>
+      `;
+      }
+    }
+  }
+
+  // todo: print result
+  document.getElementById("listOut").innerHTML = result;
+}
