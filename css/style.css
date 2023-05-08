@@ -1,0 +1,75 @@
+body > .container-fluid {
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+body > .container-fluid:nth-child(odd) {
+  background-image: url("https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWF0aHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+}
+
+body > .container-fluid:nth-child(even) {
+  background-image: url("https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+}
+
+body > .container-fluid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body > .container-fluid * {
+  position: relative;
+}
+
+body > .container-fluid button {
+  z-index: 10;
+}
+
+.container-fluid:nth-child(1) > div::after {
+  content: 'D16 - BT1 - Javascript - loop';
+}
+
+.container-fluid:nth-child(2) > div::after {
+  content: 'D16 - BT2 - Javascript - loop';
+}
+
+.container-fluid:nth-child(3) > div::after {
+  content: 'D16 - BT3 - Javascript - loop';
+}
+
+.container-fluid:nth-child(4) > div::after {
+  content: 'D16 - BT4 - Javascript - loop';
+}
+
+.container-fluid:nth-child(5) > div::after {
+  content: 'D16 - BT5 - Javascript - loop';
+}
+
+.container-fluid > div::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  padding-top: 100px;
+  text-shadow: 2px 2px 3px black;
+  background-color: rgba(33, 75, 228);
+  border-radius: 0.5rem;
+  transition: all .5s;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.container-fluid > div:hover::after {
+  height: 0;
+  padding-top: 0;
+}

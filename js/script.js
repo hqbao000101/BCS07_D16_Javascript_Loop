@@ -118,14 +118,19 @@ function ex4() {
 // ! EX5: Viết chương trình có một ô input, một button. Khi click vào button thì in ra các số nguyên tố từ 1 tới giá trị của ô input
 /* 
 todo: Mô Hình 3 Khối
-* input:
+* input: số n
 * bước xử lý: 
-*   1. 
-*   2. 
-*   3. 
-*   4. 
-*   5. 
-* output: 
+*   1. tạo sự kiện onclick trên button
+*   2. lấy giá trị số n từ người dùng
+*   3. khởi tạo biến result để chứa dãy số nguyên tố cần tìm
+*   4. kiểm tra giá trị n của người dùng: n >= 2 vì số nguyên tố nhỏ nhất là 2
+*   5. chạy vòng lặp với biến i tăng dần từ 2 đến số n
+*   6. trong vòng lặp thực hiện:
+*     - Khởi tạo biến count để đếm số lần chia hết
+*     - chạy vòng lặp thứ 2 với biến j tăng dần từ 1 đến biến i / 2 để đếm xem có bao nhiêu số j mà i có thể chia hết <=> i % j == 0 thì biến count + 1 
+*     - Hết vòng lặp biến j nếu count == 1 thì số i hiện tại sẽ là số nguyên tố. Khi đó result += i 
+*   7. getElementById đến thẻ rồi innerHTML để in kết quả ra màn hình
+* output: dãy số nguyên tố từ 1 đến số n
 */
 
 function ex5() {
