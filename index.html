@@ -25,13 +25,17 @@
     />
   </head>
 
-  <body class="bg-info">
+  <body style="background-color: #fab1a0">
     <!-- ! EX1: Tìm số nguyên dương nhỏ nhất sao cho: 1 + 2 + 3 +...+ n > 10000 -->
     <div class="container my-5">
-      <div class="ex1 p-5 w-75 mx-auto shadow bg-white rounded-3">
+      <div class="ex1 p-5 w-75 mx-auto shadow-lg bg-white rounded-3">
         <h1>Tìm số nguyên dương nhỏ nhất sao cho:</h1>
-        <p class="text-center fst-italic fw-bold text-white bg-info fs-2 my-5">1 + 2 + 3 +...+ n > 10000</p>
-        <button class="btn btn-success float-end shadow-lg" onclick="ex1()">Solve</button>
+        <p class="text-center fst-italic fw-bold text-white bg-info fs-2 my-5">
+          1 + 2 + 3 +...+ n > 10000
+        </p>
+        <button class="btn btn-success float-end shadow-lg" onclick="ex1()">
+          Solve
+        </button>
         <div class="result fs-3 mt-5">
           <span class="text-decoration-underline">Result</span>:
           <span class="text-success fw-bold"></span>
@@ -40,6 +44,34 @@
     </div>
 
     <!-- ! EX2: Viết chương trình nhập vào 2 số x, n tính tổng S(n) = x + x^2 + x^3 +...+ x^n (Sử dụng vòng lặp và hàm) -->
+    <div class="container my-5">
+      <div class="ex2 p-5 w-75 mx-auto shadow-lg bg-white rounded-3">
+        <h1>Tính tổng S(n) với:</h1>
+        <p class="text-center fst-italic fw-bold text-white bg-info fs-2">
+          S(n) = x + x^2 + x^3 +...+ x^n
+        </p>
+        <div class="my-5">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="X">Nhập số x: </label>
+              <input type="number" name="x" id="X" class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <label for="N">Nhập số n: </label>
+              <input type="number" name="n" id="N" class="form-control" />
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-success float-end shadow-lg" onclick="ex2()">
+          Calculate
+        </button>
+        <div class="result fs-3 mt-5">
+          <span class="text-decoration-underline">Result</span>:
+          <span class="text-success fw-bold"></span>
+        </div>
+      </div>
+    </div>
+
     <!-- ! EX3: Nhập vào n. Tính giai thừa 1 * 2 *...* n -->
     <!-- ! EX4: Hãy viết chương trình khi click vào button sẽ in ra 10 thẻ div. Nếu div vào vị trí chẵn thì bg màu đỏ, lẻ thì bg màu xanh dương -->
     <!-- ! EX5: Viết chương trình có một ô input, một button. Khi click vào button thì in ra các số nguyên tố từ 1 tới giá trị của ô input -->
