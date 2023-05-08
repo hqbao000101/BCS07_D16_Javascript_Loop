@@ -47,7 +47,7 @@
     <div class="container my-5">
       <div class="ex2 p-5 w-75 mx-auto shadow-lg bg-white rounded-3">
         <h1>Tính tổng S(n) với:</h1>
-        <p class="text-center fst-italic fw-bold text-white bg-info fs-2">
+        <p class="text-center fst-italic fw-bold text-white bg-info fs-2 mt-5">
           S(n) = x + x^2 + x^3 +...+ x^n
         </p>
         <div class="my-5">
@@ -73,7 +73,36 @@
     </div>
 
     <!-- ! EX3: Nhập vào n. Tính giai thừa 1 * 2 *...* n -->
+    <div class="container my-5">
+      <div class="ex3 p-5 w-75 mx-auto shadow-lg bg-white rounded-3">
+        <h1>Tính n giai thừa:</h1>
+        <p class="text-center fst-italic fw-bold text-white bg-info fs-2 mt-5">
+          1 x 2 x 3 x ... x <span class="text-danger">n</span>
+        </p>
+        <p class="text-danger fs-5 fst-italic text-end">***(0! = 1)</p>
+        <div class="mt-3 mb-5">
+          <label for="ex3-n">Nhập số n: </label>
+          <input
+            type="number"
+            name="n"
+            id="ex3-n"
+            class="form-control"
+            placeholder="n >= 0"
+          />
+        </div>
+        <button class="btn btn-success float-end shadow-lg" onclick="ex3()">
+          Calculate
+        </button>
+        <div class="result fs-3 mt-5">
+          <span class="text-decoration-underline">Result</span>:
+          <span class="text-success fw-bold"></span>
+        </div>
+      </div>
+    </div>
+
     <!-- ! EX4: Hãy viết chương trình khi click vào button sẽ in ra 10 thẻ div. Nếu div vào vị trí chẵn thì bg màu đỏ, lẻ thì bg màu xanh dương -->
+    
+
     <!-- ! EX5: Viết chương trình có một ô input, một button. Khi click vào button thì in ra các số nguyên tố từ 1 tới giá trị của ô input -->
 
     <!-- ! Bootstrap JavaScript Libraries -->
